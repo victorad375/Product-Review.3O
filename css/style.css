@@ -1,28 +1,29 @@
+.ever {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    justify-content: center;
+}
+
 .img{
     width: 350px;
     height: 550px;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
-    margin-top: 50px;
 }
 
-.im{
+.img-container{
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
-    padding-right: 330px;
 }
 
-.pf{
-    margin-left: 673px;
-    margin-top: -550.7px;
+.pf-container{
     font-size: 20px;
     background-color: white;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     width: 330px;
     padding-left: 20px;
-    
 }
 
 body{
@@ -53,8 +54,8 @@ body{
 
 .fb:hover{
     color: rgb(58, 185, 58);
-    border: 2px solid rgb(58, 185, 58);
-    background-color: white; 
+    outline: 2px solid rgb(58, 185, 58);
+    background-color: white;
 }
 
 .tb{
@@ -66,9 +67,25 @@ body{
 .sm{
     font-size: 15px;
     text-align: end;
-    padding-right: 20px;    
+    padding-right: 20px;
 }
 
 .last{
     text-align: end;
+}
+
+@media (max-width: 1000px) {
+    .ever {
+        grid-template-columns: 100%;
+    }
+    .img {
+        height: 350px;
+        object-fit: cover;
+    }
+    .img-container {
+        justify-content: center;
+    }
+    .pf-container {
+        margin: auto;
+    }
 }
